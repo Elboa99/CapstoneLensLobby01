@@ -1,4 +1,10 @@
 package kennyboateng.CapstoneLensLobby01.payloads;
 
-public record UtenteLoginResponseDTO() {
+import kennyboateng.CapstoneLensLobby01.enums.Role;
+
+public record UtenteLoginResponseDTO(String token,
+
+                                     Role ruolo,
+
+                                     Long utenteId) {
 }

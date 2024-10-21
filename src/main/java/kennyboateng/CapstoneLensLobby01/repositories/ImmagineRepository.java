@@ -11,5 +11,6 @@ import java.util.List;
 public interface ImmagineRepository extends JpaRepository<Immagine,Long> {
     List<Immagine> findByFotografoId(Long fotografoId);
     List<Immagine> findByCategoriaId(Long categoriaId);
+    List<Immagine> findByCameraMakeAndCameraModel(String cameraMake, String cameraModel);
 
 }

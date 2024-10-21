@@ -110,4 +110,8 @@ public class ImmagineService {
     public void deleteImmagine(Long id) {
         immagineRepository.deleteById(id);
     }
+
+    public List<Immagine> getImmaginiByCameraDetails(String make, String model) {
+        return immagineRepository.findByCameraMakeAndCameraModel(make, model);
+    }
 }
