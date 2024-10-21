@@ -28,6 +28,7 @@ public class Utente implements UserDetails {
 
 
     private String username;
+    @Getter
     private String email;
     private String password;
     private String nome;
@@ -55,5 +56,16 @@ public class Utente implements UserDetails {
         return List.of(new SimpleGrantedAuthority(this.ruolo.name()));
     }
 
+    @Override
+    public String getUsername() {
+        return username;
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
+    }
+
 
 }
+

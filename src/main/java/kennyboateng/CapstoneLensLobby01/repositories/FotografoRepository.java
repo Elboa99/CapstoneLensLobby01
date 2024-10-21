@@ -9,4 +9,6 @@ import java.util.Optional;
 
 @Repository
 public interface FotografoRepository extends JpaRepository<Fotografo, Long> {
-}
+    List<Fotografo> findByUtente_UsernameContainingIgnoreCase(String username);}
+
+

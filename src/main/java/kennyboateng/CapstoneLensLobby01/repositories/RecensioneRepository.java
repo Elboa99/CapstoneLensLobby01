@@ -10,4 +10,6 @@ import java.util.List;
 
 @Repository
 public interface RecensioneRepository extends JpaRepository<Recensione, Long> {
+
+    List<Recensione> findByFotografoId(Long fotografoId);
 }
